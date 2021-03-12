@@ -25,8 +25,17 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <script language="JavaScript">
+      function clp_clear() {
+        var content = window.clipboardData.getData("Text");
+        if (content == null) {
+          window.clipboardData.clearData();
+        }
+        setTimeout("clp_clear();", 1000);
+      }
+    </script>
   </head>
-  <body>
+  <body onload="clp_clear()">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
@@ -40,4 +49,33 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <script>
+    /* To Disable Inspect Element */
+    document.onkeydown = function (e) {
+      if (event.keyCode == 123) {
+        return false;
+      }
+      if (e.ctrlKey && e.keyCode == "P".charCodeAt(0)) {
+        return false; // ctrl+P (print and save as pdf)
+      }
+      if (e.ctrlKey && e.shiftKey && e.keyCode == "I".charCodeAt(0)) {
+        return false; // ctrl+shift+I (Inspect element)
+      }
+      if (e.ctrlKey && e.shiftKey && e.keyCode == "J".charCodeAt(0)) {
+        return false; // ctrl+shift+J (inspect console)
+      }
+      if (e.ctrlKey && e.keyCode == "U".charCodeAt(0)) {
+        return false; // ctrl+U (source code)
+      }
+      if (e.ctrlKey && e.keyCode == "S".charCodeAt(0)) {
+        return false; // ctrl+S  (Save)
+      }
+      if (e.ctrlKey && e.keyCode == "A".charCodeAt(0)) {
+        return false; // ctrl+A (select all)
+      }
+      if (e.ctrlKey && e.keyCode == "C".charCodeAt(0)) {
+        return false; // ctrl+C (copy text)
+      }
+    };
+  </script>
 </html>
