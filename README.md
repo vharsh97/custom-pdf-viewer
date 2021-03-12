@@ -6,3 +6,8 @@ Inspect element is accessible either by right click or by ctrl+shift+I  (element
 * Copy paste the contents of the pdf by selecting texts and copy it and paste it at another location.
 * Using third party applications/extensions we can take screenshots or download pdfs.
 * Disabling snip tools for the website and ctrl+P
+
+# All should be disbaled : How??
+
+* Disable Inspect element tool. (* Exception - user can go to browser menu and use DOM inspector )
+ 
