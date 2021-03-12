@@ -14,5 +14,8 @@ Inspect element is accessible either by right click or by ctrl+shift+I  (element
 * So, in react we can go for the react-pdf package from npm.
 
 This module is a wrapper around pdf.js, an open-source project developed by Mozilla that displays PDFs in HTML. In terms of the base web components, react-pdf renders the PDF in a <canvas> tag, which has support for the onContextMenu event handler.
+ 
+## demo link : 
+https://custom-pdf-viewer.web.app/
 
  
